@@ -1,0 +1,272 @@
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+.menu {
+	position: relative;
+	z-index: 99;
+    background: rgba(255,255,255,0.9);
+    padding: 15px 0;
+}
+
+.menu .navi {
+	display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    align-items: center;
+	justify-content: flex-end;
+	height: 100%
+}
+
+.menu .navi ul {	
+	display: flex;
+	justify-content: center;
+	height: 18px;
+	margin: 0;
+}
+
+.menu .navi ul li {
+	display: inline-block;
+	padding: 0 10px;
+}
+
+.menu .navi ul li a {
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+	text-decoration: none;
+	color: #1b1464;
+}
+
+.menu .navi ul li a:hover {
+	text-decoration: none;
+	color: #cc4d15;
+}
+
+.menu .login {
+	display: -webkit-flex;
+    -webkit-align-items: center;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.menu .login a {
+	color: #fff;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	margin: 0;	
+	padding: 10px 30px;
+	text-align: center;
+	box-shadow: inset 0 0 0 30px #cc4d15;
+	transition: all 0.4s ease .4s;
+}
+
+.menu .login a:hover {
+	box-shadow: inset 0 0 0 3px #cc4d15;	
+	color: #cc4d15;
+	transition: all 0.2s ease .2s;
+	text-decoration: none;
+}
+
+.header-bg {
+	position: relative;
+	z-index: 9;
+    margin: -100px 0;
+    width: 100%;
+}
+
+.header-bg img{
+	width: 100%;
+}
+
+.steps {
+	position: relative;
+	z-index: 999;
+	height: 470px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Lato', sans-serif;
+}
+
+.steps:after {
+    content: "";
+    background: #fff;
+    width: 30%;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.steps .container {
+	height: 100%;
+	z-index: 9999;
+}
+
+.steps .container .row {
+	height: 100%;
+}
+
+.step-one {
+	align-self: flex-end;
+	background: #fff;
+}
+
+.step-two {
+	align-self: center;
+	background: #fff;
+}
+
+.step-three {
+	align-self: flex-start;
+	background: #fff;
+}
+
+.step-one .one, .step-two .two, .step-three .three {
+	padding: 30px 0 30px 30px;
+    height: 370px;
+}
+
+.steps .num-step h4{
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #cc4d15;
+	font-family: 'Lato', sans-serif;
+}
+
+.steps .title h4{
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #1b1464;
+	font-family: 'Lato', sans-serif;
+}
+
+.steps .text p{
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+}
+
+.contact {
+    position: relative;
+    height: 580px;
+}
+
+.contact:before {
+	content: "";
+	display: block;
+	background: url('./img/girl.png');
+	width: 844px;
+	height: 466px;
+	background-position: center;
+	background-size: 100% 100%;
+	position: absolute;
+	right: 0;
+    z-index: 999;
+    margin: -200px 200px 0 0;
+    opacity: 0.7;
+}
+
+.contact .title {
+	height: 24px;
+}
+
+.contact .title h4 {
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #cc4d15;	
+	font-family: 'Lato', sans-serif;
+}
+
+.forms {
+	position: absolute;
+    z-index: 999999999;
+    width: 100%;
+}
+
+.forms form {
+	margin: 30px 0 50px;
+}
+
+.forms label {
+	display: block;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #1b1464;
+	font-family: 'Lato', sans-serif;
+}
+
+.forms input {
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	padding: 7px 10px;
+	margin:10px 0;
+	border: 1px solid #1b1464;
+	font-family: 'Lato', sans-serif;
+	background: rgba(255,255,255, 0.8);
+}
+
+.forms select {
+	width: 100%;
+	background: #fff;
+	padding: 10px;
+	margin: 0;
+	border: 1px solid #1b1464;
+	font-family: 'Lato', sans-serif;
+}
+
+.custom-checkbox span {
+	text-decoration: none;
+	text-transform: none;
+	color: #333;
+}
+
+.forms input[type="submit"] {
+	color: #fff;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	margin: 0;	
+	padding: 10px 30px;
+	text-align: center;
+	box-shadow: inset 0 0 0 30px #cc4d15;
+	transition: all 0.4s ease .4s;
+	border: 0;
+	width: auto;
+}
+
+.forms input[type="submit"]:hover {
+	box-shadow: inset 0 0 0 3px #cc4d15;	
+	color: #cc4d15;
+	transition: all 0.2s ease .2s;
+	text-decoration: none;
+}
+
+.boottom-bg img {
+	width: 100%;
+}
+
+.boottom-bg .text {	
+    position: relative;
+    z-index: 99999;
+    margin: -300px 0 100px;
+}
+
+
+footer {
+	padding: 30px 0;
+	background:#1b1464;
+	color: #fff;
+}
+
+footer .right_list ul li{
+	display: inline-block;
+}
+
+footer a {
+	color: #fff;
+}
