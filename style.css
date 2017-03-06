@@ -217,6 +217,15 @@ body {
 	margin: 0;
 	border: 1px solid #1b1464;
 	font-family: 'Lato', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('./img/chevron.png');
+    background-position: center right 6px;
+    background-repeat: no-repeat;
+    background-size: 20px;
 }
 
 .custom-checkbox span {
@@ -237,6 +246,7 @@ body {
 	transition: all 0.4s ease .4s;
 	border: 0;
 	width: auto;
+	cursor: pointer;
 }
 
 .forms input[type="submit"]:hover {
@@ -253,12 +263,21 @@ body {
 .boottom-bg .text {	
     position: relative;
     z-index: 99999;
-    margin: -300px 0 100px;
+    margin: -350px 0 100px;
 }
 
+.boottom-bg .title h4 {
+	font-size: 24px;
+	color: #1b1464;
+	text-transform: uppercase;
+}
+
+.boottom-bg p {
+	font-size: 18px;
+}
 
 footer {
-	padding: 30px 0;
+	padding: 30px 0 10px;
 	background:#1b1464;
 	color: #fff;
 }
