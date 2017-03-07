@@ -9,6 +9,10 @@ body {
     padding: 15px 0;
 }
 
+.menu .logo img {
+	width: 100%;
+}
+
 .menu .navi {
 	display: -webkit-flex; /* Safari */
     -webkit-align-items: center; /* Safari 7.0+ */
@@ -52,7 +56,7 @@ body {
 	height: 100%;
 }
 
-.menu .login a {
+.menu .login button {
 	color: #fff;
 	text-transform: uppercase;
 	display: flex;
@@ -62,9 +66,12 @@ body {
 	text-align: center;
 	box-shadow: inset 0 0 0 30px #cc4d15;
 	transition: all 0.4s ease .4s;
+	border: none;
+	background: #fff;
+	cursor: pointer;
 }
 
-.menu .login a:hover {
+.menu .login button:hover {
 	box-shadow: inset 0 0 0 3px #cc4d15;	
 	color: #cc4d15;
 	transition: all 0.2s ease .2s;
@@ -288,4 +295,508 @@ footer .right_list ul li{
 
 footer a {
 	color: #fff;
+}
+
+.loginbar {
+	width: 255px;
+	background: rgba(255,255,255, 1);
+	padding:10px 20px;
+	position: absolute;
+    right: 40px;
+    top: 63px;
+    display: none;
+    transition: all .3s ease .2s;
+    -webkit-box-shadow: 0px 61px 167px -46px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 61px 167px -46px rgba(0,0,0,0.75);
+	box-shadow: 0px 61px 167px -46px rgba(0,0,0,0.75);
+}
+
+.loginbar input {
+	display: block;
+	margin: 5px 0;
+    float: right;
+    padding: 5px 10px;
+}
+
+.loginbar input[type="submit"] {
+	box-shadow: inset 0 0 0 3px #cc4d15;
+	background: transparent;
+	color: #cc4d15;
+	cursor: pointer;
+	border: none;
+    transition: all 0.4s ease .4s;
+    text-transform: uppercase;
+}
+
+.loginbar input[type="submit"]:hover {
+	box-shadow: inset 0 0 0 30px #cc4d15;
+    transition: all 0.4s ease .4s;
+	color: #fff;
+}
+
+/*----------------------- HAMBURGER ---------------------------*/
+
+.c-hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  width: 110px;
+  height: 95px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.c-hamburger:focus {
+  outline: none;
+}
+
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 44px;
+  left: 18px;
+  right: 18px;
+  height: 8px;
+  background: white;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #fff;
+  content: "";
+}
+
+.c-hamburger span::before {
+  top: -20px;
+}
+
+.c-hamburger span::after {
+  bottom: -20px;
+}
+
+.c-hamburger--htx {
+  background-color: #cc4d15;
+  margin: 0 auto;
+}
+
+.c-hamburger--htx span {
+  transition: background 0s 0.3s;
+}
+
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.c-hamburger--htx span::before {
+  transition-property: top, transform;
+}
+
+.c-hamburger--htx span::after {
+  transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.c-hamburger--htx.is-active {
+  background-color: #cb0032;
+}
+
+.c-hamburger--htx.is-active span {
+  background: none;
+}
+
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+/*----------------------- HAMBURGER ---------------------------*/
+
+@media screen and (min-width: 768px){
+	.pos-f-t {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	.menu .navi ul li {
+		padding: 0 5px;
+	}
+
+	.steps {
+		height: auto;
+    	margin: 0 0 100px;
+	}
+
+	.steps:after {
+		display: none;
+	}
+
+	.forms {
+		position: relative;
+		z-index: auto;
+	}
+
+	.step-one .one, .step-two .two, .step-three .three {
+		height: auto;
+	}
+
+	.contact:before {
+		z-index: 999;
+   		width: 422px;
+    	height: 233px;
+    	margin: -125px 48px 0 0;
+    	opacity: 0.3;
+	}
+
+	.boottom-bg .text {
+		margin: -250px 0 100px;
+	}
+
+	.boottom-bg img {
+		opacity: .5;
+	}
+
+	.loginbar {
+	    right: 24px;
+	    top: 57px;		
+	}
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+	.menu .logo {
+		width: 30%;
+		margin: 0 auto;
+	}
+
+	.menu .navi {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.steps {
+		height: auto;
+    	margin: 0 0 100px;
+	}
+
+	.steps:after {
+		display: none;
+	}
+
+	.header-bg {
+    	margin: 0 0 -100px;
+	}
+
+	.contact {
+		height: auto;
+	}
+
+	.forms {
+		position: relative;
+		z-index: auto;
+	}
+
+	.step-one .one, .step-two .two, .step-three .three {
+		height: auto;
+	}
+
+	.contact:before {
+		z-index: 999;
+   		width: 422px;
+    	height: 233px;
+    	margin: -125px 48px 0 0;
+    	opacity: 0.3;
+	}
+
+	.boottom-bg .text {
+    	margin: -250px 0 50px;
+	}
+
+	.boottom-bg img {
+		opacity: .5;
+	}
+
+	.social img {
+		margin: 10px auto;
+    	display: block;
+	}
+
+	.loginbar {
+   		margin: 0 auto;
+   		right: auto;
+   		top: auto;
+   		position: relative;
+   		padding: 0;
+	}
+
+	.loginbar form {
+		width: 255px;
+		background: rgba(255,255,255, 1);
+		padding:10px 20px;
+	    transition: all .3s ease .2s;
+	    -webkit-box-shadow: 0px 61px 167px -46px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 61px 167px -46px rgba(0,0,0,0.75);
+		box-shadow: 0px 61px 167px -46px rgba(0,0,0,0.75);
+		position: absolute;
+	}
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+
+	.menu .logo {
+		width: 30%;
+		margin: 0 auto;
+	}
+
+	.menu .navi {
+		display: none;
+	}
+
+	.menu .pos-f-t {
+		display: block;
+		justify-content: center;
+	}
+
+	.menu .pos-f-t .navi {
+		display: block;
+		text-align: center;	
+	}
+
+	.menu .pos-f-t .navi ul {
+		display: block;
+		height: auto
+	}
+
+	.menu .pos-f-t .navi ul li {
+		display: inline-block;
+	}
+
+	.collapse.show {
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+
+	.menu .navbar {
+		display: block;
+		padding: 0;
+		margin: 30px 0 0;
+	}
+
+	.steps {
+		height: auto;
+    	margin: 0 0 100px;
+	}
+
+	.steps:after {
+		display: none;
+	}
+
+	.header-bg {
+    	margin: 0 0 -100px;
+	}
+
+	.contact {
+		height: auto;
+	}
+
+	.forms {
+		position: relative;
+		z-index: auto;
+	}
+
+	.step-one .one, .step-two .two, .step-three .three {
+		height: auto;
+	}
+
+	.contact:before {
+		z-index: 999;
+   		width: 422px;
+    	height: 233px;
+    	margin: -125px 48px 0 0;
+    	opacity: 0.3;
+	}
+
+	.boottom-bg .text {
+    	margin: -244px 0 0;
+	}
+
+	.boottom-bg img {
+		opacity: .2;
+	}
+
+	.social img {
+		margin: 10px 0;
+    	display: block;
+	}
+
+	footer .row {
+		margin: 0;
+	}
+
+	.loginbar {
+   		margin: 0 auto;
+	    right: -43px;
+	    top: 92px;
+	    position: absolute;
+   		padding: 0;
+	}
+
+	.loginbar form {
+		width: 255px;
+		background: rgba(255,255,255, 1);
+		padding:10px 20px;
+	    transition: all .3s ease .2s;
+	    -webkit-box-shadow: 0px 61px 167px -46px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 61px 167px -46px rgba(0,0,0,0.75);
+		box-shadow: 0px 61px 167px -46px rgba(0,0,0,0.75);
+		position: absolute;
+	}
+
+}
+
+@media screen and (max-width: 576px) {
+
+	.menu .logo {
+		width: 30%;
+		margin: 0 auto;
+	}
+
+	.menu .navi {
+		display: none;
+	}
+
+	.menu .pos-f-t {
+		display: block;
+		justify-content: center;
+	}
+
+	.menu .pos-f-t .navi {
+		display: block;
+		text-align: center;	
+	}
+
+	.menu .pos-f-t .navi ul {
+		display: block;
+		height: auto
+	}
+
+	.menu .pos-f-t .navi ul li {
+		display: block;
+	}
+
+	.collapse.show {
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+
+	.menu .navbar {
+		display: block;
+		padding: 0;
+		margin: 30px 0 0;
+	}
+
+	.steps {
+		height: auto;
+    	margin: 0 0 100px;
+	}
+
+	.steps:after {
+		display: none;
+	}
+	.steps .row {
+		margin: 0;
+	}
+
+	.header-bg {
+    	margin: 0;
+	}
+
+	.contact {
+		height: auto;
+	}
+
+	.forms {
+		position: relative;
+		z-index: auto;
+	}
+
+	.step-one .one, .step-two .two, .step-three .three {
+		height: auto;
+	}
+
+	.contact:before {
+		z-index: 999;
+   		width: 422px;
+    	height: 233px;
+    	margin: -125px -65px 0 0;
+    	opacity: 0.3;
+	}
+
+	.boottom-bg .text {
+    	margin: 30px 0 ;
+	}
+
+	.boottom-bg img {
+		opacity: .2;
+	}
+
+	.social img {
+		margin: 10px 0;
+    	display: block;
+	}
+
+	footer .row {
+		margin: 0;
+	}
+
+	.boottom-bg img {
+		display: none;
+	}
+
+	.loginbar {
+   		margin: 0 auto;
+   		right: auto;
+   		top: auto;
+   		position: relative;
+   		padding: 0;
+	}
+
+	.loginbar form {
+		width: 255px;
+		background: rgba(255,255,255, 1);
+		padding:10px 20px;
+	    transition: all .3s ease .2s;
+	    -webkit-box-shadow: 0px 61px 167px -46px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 61px 167px -46px rgba(0,0,0,0.75);
+		box-shadow: 0px 61px 167px -46px rgba(0,0,0,0.75);
+		position: absolute;
+	}
+
 }
